@@ -1,7 +1,4 @@
 # cplusplus
-source code when I learned cplusplus
 
-
-# Sourcetree
-
-this code is managed with Sourcetree. 
+5 ~ 10 codes in each cpp file.
+this repository has codes when I learn cplusplus 
