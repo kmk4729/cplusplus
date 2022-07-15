@@ -100,3 +100,46 @@ int main() {
 	delete[] arr;
 	return 0;
 }
+
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int num;
+	while (true) {
+		cout << "Please enter a number: ";
+		cin >> num;
+		if (num < 2) {
+			cout << "Wrong number!!!" << endl;
+			break;
+		}
+		int half = num / 2;
+		cout << "Size of random array : " << half << endl;
+		int* arr = new int[half];
+		for (int k = 0; k < half; k++) {
+			arr[k] = rand() % num+1;
+		}
+
+		int sum = 0;
+		cout << "[array]" << endl;
+		for (int k = 0; k < half; k++) {
+			cout << arr[k] << " ";
+			for (int g = k + 1; g < half; g++) {
+				if (arr[k] == arr[g]) {
+					sum++;
+				}
+			}
+		}
+		cout << endl;
+
+		if (sum == 0) {
+			cout << "Duplicates not found"<<endl<<endl;
+		}
+		else {
+			cout << "Duplicates found" << endl<<endl;
+		}
+		
+	}
+}
